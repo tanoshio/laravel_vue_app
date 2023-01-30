@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class CreateBooksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('publisher');
             $table->string('ISBN');
             $table->string('summary');
-            $table->string('gunre');
+            $table->string('genre');
             $table->boolean('available');
             $table->timestamps();
         });
