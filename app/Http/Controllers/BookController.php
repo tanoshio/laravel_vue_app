@@ -20,4 +20,13 @@ class BookController extends Controller
         // eloquantをそのままreturnすると、jsonに変換してくれる。
         return $books;
     }
+    
+    public function store(Request $request)
+    {
+        // モデルの空のインスタンスを生成
+        $book = new Book();
+
+        // 受け取ったデータをインスタンスに挿入し、DBに保存
+        $book->fill($request->all())->save();
+    }
 }
